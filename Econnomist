@@ -1,1 +1,450 @@
+import * as React from "react";
+import { StyleSheet, View, Text, Pressable } from "react-native";
+const HomePage = () => {
+  const navigation = useNavigation();
+  return (
+    <View style={styles.homePage}>
+      <View style={styles.homePageChild} />
+      <View style={styles.thisWeeksProgressWrapper}>
+        <Text style={styles.thisWeeksProgress}>This Weeks Progress</Text>
+      </View>
+      <Pressable
+        style={[styles.wrapper, styles.wrapperLayout]}
+        onPress={() => navigation.navigate("QRCode")}
+      >
+      </Pressable>
+      <Pressable
+        style={[styles.container, styles.wrapperLayout]}
+        onPress={() => navigation.navigate("HelpCentre")}
+      >
+      </Pressable>
+      <Text style={[styles.helloUsername, styles.economicalTypo]}>
+        Hello username!
+      </Text>
+      <View style={[styles.homePageItem, styles.homePageItemLayout]} />
+      <Pressable
+        style={styles.frame}
+        onPress={() => navigation.navigate("Challenges")}
+      >
+      
+      </Pressable>
+    
+      <Pressable
+        style={[styles.iconmonstrBinoculars81, styles.iconmonstrLayout]}
+        onPress={() => navigation.navigate("SearchPage")}
+      >
+      </Pressable>
+      
+      
+      <Pressable
+        style={[styles.groupPressable, styles.ellipseIconPosition]}
+        onPress={() => navigation.navigate("JoinLeaderboard")}
+      >
+       
+      </Pressable>
+      <Pressable
+        style={[styles.ellipsePressable, styles.homePosition1]}
+        onPress={() => navigation.navigate("LetsChat")}
+      >
+      
+      </Pressable>
+      <Text style={[styles.qrCode, styles.qrCodeTypo]}>Qr code</Text>
+      <Text style={[styles.helpCentre, styles.helpCentreLayout]}>
+        Help Centre
+      </Text>
+      <Pressable
+        style={[styles.leaderboard, styles.challengesPosition]}
+        onPress={() => navigation.navigate("JoinLeaderboard")}
+      >
+        <Text style={styles.leaderboard1}>Leaderboard</Text>
+      </Pressable>
+      <Pressable
+        style={[styles.challenges, styles.challengesPosition]}
+        onPress={() => navigation.navigate("Challenges")}
+      >
+        <Text style={styles.homeTypo}>Challenges</Text>
+      </Pressable>
+      <Text style={[styles.home, styles.homePosition]}>Home</Text>
+      <Pressable
+        style={[styles.search, styles.homePosition]}
+        onPress={() => navigation.navigate("SearchPage")}
+      >
+        <Text style={[styles.search1, styles.search1Typo]}>Search</Text>
+      </Pressable>
+      <Pressable
+        style={[styles.letsChat, styles.homePosition]}
+        onPress={() => navigation.navigate("LetsChat")}
+      >
+        <Text style={[styles.letsChat1, styles.search1Typo]}>Let’s Chat</Text>
+      </Pressable>
+      <Text style={[styles.economical, styles.economicalTypo]}>EcoNomical</Text>
+      <View style={styles.progressBar}>
+        <View style={styles.progressBarChild} />
+      </View>
+      <View style={[styles.progressBar1, styles.homePageItemLayout]}>
+        <View
+          style={[styles.property1default, styles.property1defaultShadowBox]}
+        >
+          <View style={styles.progressBarChild} />
+        </View>
+        <View
+          style={[styles.property1default1, styles.property1defaultShadowBox]}
+        >
+          <View style={styles.progressBarChild} />
+        </View>
+        <View
+          style={[styles.property1variant3, styles.property1defaultShadowBox]}
+        >
+          <View style={styles.progressBarChild} />
+        </View>
+      </View>
+      <Pressable
+        style={styles.image2}
+        onPress={() => navigation.navigate("QRCode")}
+      >
+        
+      </Pressable>
+    </View>
+  );
+};
 
+const styles = StyleSheet.create({
+  wrapperLayout: {
+    height: 112,
+    width: 119,
+    top: 277,
+    position: "absolute",
+  },
+  economicalTypo: {
+    textAlign: "left",
+    fontSize: FontSize.size_13xl,
+    color: Color.colorBlack,
+    position: "absolute",
+  },
+  homePageItemLayout: {
+    borderWidth: 1,
+    position: "absolute",
+  },
+  iconLayout: {
+    height: "100%",
+    width: "100%",
+  },
+  homePosition1: {
+    height: 33,
+    top: 607,
+    position: "absolute",
+  },
+  iconmonstrLayout: {
+    height: 24,
+    width: 24,
+    top: 611,
+    position: "absolute",
+  },
+  ellipseIconPosition: {
+    top: 608,
+    height: 33,
+    width: 32,
+    position: "absolute",
+  },
+  qrCodeTypo: {
+    fontSize: FontSize.size_xs,
+    top: 397,
+    textAlign: "center",
+    color: Color.colorBlack,
+    fontFamily: FontFamily.changaRegular,
+  },
+  helpCentreLayout: {
+    height: 22,
+    position: "absolute",
+  },
+  challengesPosition: {
+    top: 642,
+    position: "absolute",
+  },
+  homePosition: {
+    top: 641,
+    position: "absolute",
+  },
+  search1Typo: {
+    height: 13,
+    fontSize: FontSize.size_6xs,
+    textAlign: "center",
+    color: Color.colorBlack,
+    fontFamily: FontFamily.changaRegular,
+  },
+  property1defaultShadowBox: {
+    left: 19,
+    height: 19,
+    width: 300,
+    borderRadius: Border.br_xl,
+    backgroundColor: Color.colorWhite,
+    shadowOpacity: 1,
+    elevation: 4,
+    shadowRadius: 4,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowColor: "rgba(0, 0, 0, 0.25)",
+    position: "absolute",
+    overflow: "hidden",
+  },
+  homePageChild: {
+    marginLeft: -171.5,
+    top: 99,
+    backgroundColor: Color.colorGainsboro_300,
+    width: 343,
+    height: 80,
+    left: "50%",
+    position: "absolute",
+  },
+  thisWeeksProgress: {
+    top: 11,
+    fontSize: FontSize.size_mini,
+    width: 175,
+    height: 18,
+    textAlign: "center",
+    color: Color.colorBlack,
+    fontFamily: FontFamily.changaRegular,
+    left: 74,
+    position: "absolute",
+  },
+  thisWeeksProgressWrapper: {
+    top: 90,
+    left: 30,
+    width: 323,
+    height: 87,
+    shadowOpacity: 1,
+    elevation: 4,
+    shadowRadius: 4,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowColor: "rgba(0, 0, 0, 0.25)",
+    position: "absolute",
+  },
+  wrapper: {
+    left: 41,
+  },
+  container: {
+    left: 196,
+  },
+  helloUsername: {
+    top: 201,
+    width: 239,
+    height: 57,
+    fontFamily: FontFamily.changaRegular,
+    left: 74,
+    fontSize: FontSize.size_13xl,
+  },
+  homePageItem: {
+    top: 471,
+    left: 47,
+    borderStyle: "solid",
+    borderColor: Color.colorBlack,
+    width: 280,
+    height: 95,
+    backgroundColor: Color.colorWhite,
+    borderWidth: 1,
+    shadowOpacity: 1,
+    elevation: 4,
+    shadowRadius: 4,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowColor: "rgba(0, 0, 0, 0.25)",
+  },
+  icon2: {
+    borderRadius: 11,
+    overflow: "hidden",
+  },
+  frame: {
+    left: 45,
+    top: 461,
+    width: 283,
+    height: 106,
+    position: "absolute",
+  },
+  homePageInner: {
+    left: 232,
+    width: 32,
+    height: 33,
+    top: 607,
+  },
+  icon3: {
+    overflow: "hidden",
+  },
+  iconmonstrBinoculars81: {
+    left: 236,
+  },
+  ellipseIcon: {
+    left: 109,
+  },
+  groupPressable: {
+    left: 41,
+  },
+  ellipsePressable: {
+    left: 293,
+    width: 33,
+    height: 33,
+    top: 607,
+  },
+  qrCode: {
+    left: 62,
+    width: 77,
+    height: 17,
+    position: "absolute",
+  },
+  helpCentre: {
+    left: 209,
+    width: 93,
+    fontSize: FontSize.size_xs,
+    top: 397,
+    textAlign: "center",
+    color: Color.colorBlack,
+    fontFamily: FontFamily.changaRegular,
+  },
+  leaderboard1: {
+    height: 14,
+    width: 47,
+    fontSize: FontSize.size_6xs,
+    textAlign: "center",
+    color: Color.colorBlack,
+    fontFamily: FontFamily.changaRegular,
+  },
+  leaderboard: {
+    left: 34,
+  },
+  homeTypo: {
+    height: 12,
+    width: 47,
+    fontSize: FontSize.size_6xs,
+    textAlign: "center",
+    color: Color.colorBlack,
+    fontFamily: FontFamily.changaRegular,
+  },
+  challenges: {
+    left: 102,
+  },
+  home: {
+    left: 164,
+    height: 12,
+    width: 47,
+    fontSize: FontSize.size_6xs,
+    textAlign: "center",
+    color: Color.colorBlack,
+    fontFamily: FontFamily.changaRegular,
+  },
+  search1: {
+    width: 46,
+  },
+  search: {
+    left: 225,
+  },
+  letsChat1: {
+    width: 48,
+  },
+  letsChat: {
+    left: 285,
+  },
+  economical: {
+    marginLeft: -101.5,
+    top: 57,
+    fontFamily: FontFamily.nicoMoji,
+    width: 218,
+    height: 36,
+    left: "50%",
+  },
+  progressBarChild: {
+    alignSelf: "stretch",
+    backgroundColor: Color.colorPalegreen,
+    borderRadius: Border.br_xl,
+    flex: 1,
+  },
+  progressBar: {
+    top: 132,
+    paddingBottom: Padding.p_11xs,
+    paddingRight: Padding.p_231xl,
+    paddingTop: Padding.p_11xs,
+    paddingLeft: Padding.p_11xs,
+    height: 19,
+    width: 300,
+    borderRadius: Border.br_xl,
+    backgroundColor: Color.colorWhite,
+    left: 41,
+    shadowOpacity: 1,
+    elevation: 4,
+    shadowRadius: 4,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowColor: "rgba(0, 0, 0, 0.25)",
+    position: "absolute",
+    overflow: "hidden",
+  },
+  property1default: {
+    top: 15,
+    left: 19,
+    paddingBottom: Padding.p_11xs,
+    paddingRight: Padding.p_231xl,
+    paddingTop: Padding.p_11xs,
+    paddingLeft: Padding.p_11xs,
+  },
+  property1default1: {
+    top: 15,
+    left: 19,
+    paddingBottom: Padding.p_11xs,
+    paddingRight: Padding.p_231xl,
+    paddingTop: Padding.p_11xs,
+    paddingLeft: Padding.p_11xs,
+  },
+  property1variant3: {
+    top: 78,
+    padding: Padding.p_11xs,
+  },
+  progressBar1: {
+    top: -22,
+    left: 378,
+    borderRadius: Border.br_8xs,
+    borderStyle: "dashed",
+    borderColor: "#9747ff",
+    width: 340,
+    height: 117,
+    display: "none",
+    overflow: "hidden",
+  },
+  image2: {
+    left: 72,
+    top: 307,
+    width: 56,
+    height: 58,
+    position: "absolute",
+  },
+  homePageChild2: {
+    left: 171,
+    width: 32,
+    height: 33,
+    top: 607,
+  },
+  iconmonstrBuilding51: {
+    left: 175,
+    overflow: "hidden",
+  },
+  iconmonstrShoppingBag51: {
+    left: 115,
+    top: 613,
+    width: 21,
+  },
+  homePage: {
+    backgroundColor: Color.colorLightcyan,
+    height: 667,
+    overflow: "hidden",
+    width: "100%",
+    flex: 1,
+  },
+});
+
+export default HomePage;
