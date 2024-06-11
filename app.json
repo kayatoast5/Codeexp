@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "EcoNomist",
-    "slug": "EcoNomist",
+    "name": "economist",
+    "slug": "economist",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
